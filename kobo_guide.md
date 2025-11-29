@@ -56,7 +56,7 @@ This is relatively easy to install
   kepubify --output "/path/to/save/the/book/" /path/to/the/book.epub #single book to path
   kepubify -o "converted" *.epub #all books with .epub in current dir into /converted
 ```
-#### Calibre
+#### Calibre On the CLI
 
 While Kepubify is incredible for converting EPUB to KEPUB, there will often be a need to convert other ebook file types into EPUB/KEPUB. This can be done with Calibre (https://manual.calibre-ebook.com/generated/en/cli-index.html). You can use the UI, but why would you? 
 
@@ -67,6 +67,22 @@ After installation and path configuration (this will vary by machine), the comma
 See docs for full options.
 
 If you are converting any other ebook file type (azw3, mobi), you shouldn't have to do to much processing. If you're converting pdf.. good luck.
+
+#### Tools For Traditional Chinese
+
+Unforunately, the vast majority Chinese ebooks will only be available in Simplified. There are several options in this situation:
+1. Find traditional chinese ebooks natively.
+   * e.g. https://haodoo.org/
+2. Convert from Simplified to Traditional.
+
+This second option is somewhat tricky. For instance,  面 in simplified might take the place of 面 or 麵 in traditional, but 面 means 'face' while 麵 means flour/wheat. As such, any good converter will have awareness to context rather than simply finding and replacing. There seem to be a few options.
+
+* [OpenCC](https://github.com/BYVoid/OpenCC)
+	* A CLI tool with simple usage and syntax.
+ 	* I haven't been able to get this to work, and the epub files outputted often have issues.
+* Calibre Conversion Plugin
+	* In Calibre, go to `preferences` > `Get Plugins to Enance Calibre` > `Filter By Name` > `Traditional <--> Simplified Chinese Converter` to install the plugin
+ 	* Right click on the Ebook to convert then `Convert Chinese Text` in the top bar. Choose your settings, run it, then click `Save` 
 
 #### Dictionaries
 
