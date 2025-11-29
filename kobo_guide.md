@@ -68,5 +68,17 @@ See docs for full options.
 
 If you are converting any other ebook file type (azw3, mobi), you shouldn't have to do to much processing. If you're converting pdf.. good luck.
 
+#### Dictionaries
+
+One of the biggest advantages of breaking out of the kindle or kobo ecosystems is the ability to use any sort of dictionary you want so long as it is a readable format, such as [StarDict](https://en.wikipedia.org/wiki/StarDict). For instance, although the Chinese-English Wikitionary is good, it doesn't have pinyin. The CC-CEDICT, however, does have pinyin. 
+
+This is a sample workflow for how to side-load the CC-CEDICT dictionary onto KoReader.
+
+1. download the CC-CEDICT from the official source: https://cc-cedict.org/wiki/ . This will decompress to a `*.u8` file
+2. The `*.u8` needs to be converted to StarDict format. This online tool works well: https://dictz.github.io/cc-cedict_converter.html
+3. The tool will yield three files `*.dict.dz` , `*.ifo` , `*.idx` .
+   * If any of the files are `*.gz`, these will need to be decompressed.
+4. Copy all these files to `/koreader/data/dict/`
+
 	
 	
